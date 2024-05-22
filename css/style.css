@@ -30,13 +30,18 @@ body {
 .inicio:hover {
     color: #d9790f;
 }
+.contenedor-menu {
+    width: 100%;
+}
 .contenedor-nav-secciones {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     padding: 1% 20%;
     box-shadow: 0 0 10px #180f0a;
     background-color: #f5eee2;
+}
+.menu-desplegable {
+    display: none;
 }
 .seccion {
     list-style: none;
@@ -48,8 +53,7 @@ body {
     text-decoration: none;
 }
 .seccion:hover {
-    transform: scale(1.1);
-    letter-spacing: 2px;
+    transform: scale(1.2);
 }
 .snacks {
     color: #180f0a;
@@ -161,4 +165,89 @@ body {
     font-size: 20px;
     text-align: right;
     color: #f5eee2;
+}
+
+/* Tablets */
+@media screen and (min-width: 786px) and (max-width: 991px) {
+    body {
+        background-color: #180f0a;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .nav-menu {
+        height: 100px;
+    }
+    .logo {
+        margin-top: 25px;
+        width: 30%;
+    }
+    .inicio {
+        display: none;
+    }
+    .contenedor-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        padding: 50px 10px;
+    }
+    .contenedor-menu:hover .contenedor-nav-secciones {
+        display: block;
+    }
+    .contenedor-nav-secciones {
+        z-index: 1;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 14px;
+        padding: 20px;
+        transform-origin: top;
+        box-shadow: none;
+    }
+    .menu-desplegable {
+        display: block;
+        margin: auto;
+        
+    }
+    .contenedor-menu:hover {
+        background-color: #f5eee2;
+    }
+    .contenedor-menu:hover .linea {
+        background-color: #d9790f;
+    }
+    .linea {
+        width: 40px;
+        height: 6px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        background-color: #f5eee2;
+        transition: all 0.2s ease-in-out;
+    }
+    .seccion {
+        padding: 8px;
+        text-align: center;
+    }
+
+    .hero-texto {
+        font-size: 24px;
+    }
+    .hero-img {
+        width: 80%;
+    }
+    .conocenos-texto, .conocenos-boton {
+        margin-bottom: 10%;
+    }
+    .pie-pagina {
+        justify-content: center;
+    }
+    .pie-pagina p {
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    .puretaste-simbolo {
+        margin: 5% 25%;
+    }
 }
